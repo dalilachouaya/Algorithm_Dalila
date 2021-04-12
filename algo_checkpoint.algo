@@ -1,0 +1,27 @@
+ALGORITHM Checkpoint_algo
+VAR
+
+    Senten : STRING;
+    i,len,Vcount,Wcount: integer := 0;
+
+BEGIN
+    Read(Senten)
+    len = Senten.length;
+    IF (i = 0; i < len ; i++) THEN
+        IF (Senten[i].isAlpha <> ' ') && (Senten[i+1].isAlpha <> ' ') THEN
+                Wcount++;
+        END_IF
+    END_IF
+    IF (i = 0; i < len ; i++) THEN
+        Senten[i] = Senten.lower() ;
+        
+        IF (Senten[i] == 'a' || Senten[i] == 'e' || Senten[i] == 'i' || Senten[i] == 'o' || Senten[i] == 'u') THEN
+            Vcount++;
+            
+        END_IF
+    END_IF
+    Write("The length of the sentence ,The number of words and The number of vowels in the sentence are respectively :" )
+    Write(len)
+    Write(Wcount)
+    Write(Vcount)
+END
